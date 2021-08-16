@@ -1,0 +1,16 @@
+com/richfinancesmobile/SplashActivity.java
+ com.richfinancesmobile.SplashActivity
+com/richfinancesmobile/BuildConfig.java
+ com.richfinancesmobile.BuildConfig
+com/richfinancesmobile/MainActivity.java
+ com.richfinancesmobile.MainActivity
+com/richfinancesmobile/ReactNativeFlipper.java
+ com.richfinancesmobile.ReactNativeFlipper
+ com.richfinancesmobile.ReactNativeFlipper$1
+ com.richfinancesmobile.ReactNativeFlipper$2
+ com.richfinancesmobile.ReactNativeFlipper$2$1
+com/richfinancesmobile/MainApplication.java
+ com.richfinancesmobile.MainApplication
+ com.richfinancesmobile.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

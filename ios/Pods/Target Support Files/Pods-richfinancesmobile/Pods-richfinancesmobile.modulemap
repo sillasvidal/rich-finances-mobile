@@ -1,0 +1,6 @@
+module Pods_richfinancesmobile {
+  umbrella header "Pods-richfinancesmobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

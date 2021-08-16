@@ -1,0 +1,68 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.richfinancesmobile"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:4:22-64
+12
+13    <application
+13-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:6:5-31:19
+14        android:name="com.richfinancesmobile.MainApplication"
+14-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:7:7-38
+15        android:allowBackup="false"
+15-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:11:7-34
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.0.1] /Users/sillasvidal/.gradle/caches/transforms-2/files-2.1/8925f57c2bb08b53315accc4c03f425c/core-1.0.1/AndroidManifest.xml:22:18-86
+17        android:icon="@mipmap/ic_launcher"
+17-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:9:7-41
+18        android:label="@string/app_name"
+18-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:8:7-39
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:10:7-52
+20        android:theme="@style/AppTheme" >
+20-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:12:7-38
+21        <activity
+21-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:14:7-22:18
+22            android:name="com.richfinancesmobile.SplashActivity"
+22-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:15:9-39
+23            android:label="@string/app_name"
+23-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:17:9-41
+24            android:theme="@style/SplashTheme" >
+24-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:16:9-43
+25            <intent-filter>
+25-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:18:9-21:25
+26                <action android:name="android.intent.action.MAIN" />
+26-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:19:13-65
+26-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:19:21-62
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:20:13-73
+28-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:20:23-70
+29            </intent-filter>
+30        </activity>
+31        <activity
+31-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:24:7-30:34
+32            android:name="com.richfinancesmobile.MainActivity"
+32-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:25:9-37
+33            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+33-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:27:9-86
+34            android:exported="true"
+34-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:30:9-32
+35            android:label="@string/app_name"
+35-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:26:9-41
+36            android:launchMode="singleTask"
+36-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:28:9-40
+37            android:windowSoftInputMode="adjustResize" />
+37-->/Users/sillasvidal/svtech/rich-finances-mobile/android/app/src/main/AndroidManifest.xml:29:9-51
+38    </application>
+39
+40</manifest>
