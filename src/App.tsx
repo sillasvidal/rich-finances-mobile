@@ -1,35 +1,18 @@
 import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native';
 
 import { ThemeProvider } from 'styled-components';
 
 import theme from './global/styles/theme';
 
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  CardIcon,
-  CardText,
-  CardTitle,
-  CardValue,
-  Container,
-  ContainerBalance,
-  ContainerCards,
-  ContainerInfo,
-  ContainerInfoContent,
-  ContainerInfoContentText,
-  ContainerInfoContentTitle,
-  ContainerInfoTitle,
-  ContainerTopHeader,
-  Header,
-  HeaderTitle,
-  TextBalance,
-  TextTitleBalance,
-  UserProfile,
-} from './styles';
-
 import SplashScreen from 'react-native-splash-screen';
+import Dashboard from './pages/Dashboard';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Transactions from './pages/Transactions';
+
+import Icon from 'react-native-vector-icons/Feather';
+
+const Tab = createBottomTabNavigator();
 
 const App = () => {  
   useEffect(() => {
@@ -38,60 +21,37 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor='#3D3D3D' />
-      <Container>
-        <Header>
-          <ContainerTopHeader>
-            <HeaderTitle>Rich Finances</HeaderTitle>
-            <UserProfile></UserProfile>
-          </ContainerTopHeader>
-          <ContainerBalance>
-            <TextTitleBalance>Saldo em contas</TextTitleBalance>
-            <TextBalance>R$5.000,00</TextBalance>
-          </ContainerBalance>
-        </Header>
-
-        <ContainerCards
-         horizontal={true}
-         showsHorizontalScrollIndicator={false}
+      <NavigationContainer>
+        <Tab.Navigator 
+          initialRouteName="Principal"
+          screenOptions={({route}) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+  
+              if (route.name === 'Principal') {
+                iconName = focused
+                  ? 'home'
+                  : 'home';
+              } else if (route.name === 'Transações') {
+                iconName = focused ? 'align-left' : 'align-left';
+              }
+  
+              // You can return any component that you like here!
+              return <Icon name={iconName} size={size} color={color} />;
+            },
+            headerShown: false,
+            tabBarActiveTintColor: '#438AFE',
+            tabBarInactiveTintColor: '#BBBBBB',
+            tabBarActiveBackgroundColor: '#3D3D3D',
+            tabBarInactiveBackgroundColor: '#3D3D3D',
+            tabBarHideOnKeyboard: true,
+            tabBarLabelStyle: { fontSize: 16},
+          })}
         >
-          <Card>
-            <CardHeader>
-              <CardTitle>Receitas</CardTitle>
-              <CardIcon type="incomes" />
-            </CardHeader>
-            <CardBody>
-              <CardValue type="incomes">R$5.000,00</CardValue>
-              <CardText>Última receita dia 28 de agosto</CardText>
-            </CardBody>
-          </Card>
-          <Card>
-          <CardHeader>
-              <CardTitle>Despesas</CardTitle>
-              <CardIcon  type="outcomes"/>
-            </CardHeader>
-            <CardBody>
-              <CardValue type="outcomes">R$5.000,00</CardValue>
-              <CardText>Última despesa dia 28 de agosto</CardText>
-            </CardBody>
-          </Card>
-        </ContainerCards>
-
-        <ContainerInfo>
-          <ContainerInfoTitle>Despesas por categoria</ContainerInfoTitle> 
-          <ContainerInfoContent>
-            <ContainerInfoContentTitle>
-              Opa! Você não tem despesas
-              cadastradas esse mês.
-            </ContainerInfoContentTitle>
-
-            <ContainerInfoContentText>
-              Adicione seus gastos no mês atual para ver seus gráficos.
-            </ContainerInfoContentText>
-          </ContainerInfoContent>
-        </ContainerInfo>
-      </Container>
+          <Tab.Screen name="Principal" component={Dashboard} />
+          <Tab.Screen name="Transações" component={Transactions} />
+        </Tab.Navigator>
+      </NavigationContainer>
     </ThemeProvider>
   );
 };

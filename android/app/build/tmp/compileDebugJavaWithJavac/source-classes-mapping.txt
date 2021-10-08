@@ -9,8 +9,8 @@ com/richfinancesmobile/ReactNativeFlipper.java
  com.richfinancesmobile.ReactNativeFlipper$1
  com.richfinancesmobile.ReactNativeFlipper$2
  com.richfinancesmobile.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
 com/richfinancesmobile/MainApplication.java
  com.richfinancesmobile.MainApplication
  com.richfinancesmobile.MainApplication$1
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
